@@ -1,0 +1,200 @@
+export const workoutPlans = [
+    {
+        id: 1,
+        title: "HIIT Fat Burner",
+        duration: "45 Mins",
+        calories: "600-750",
+        level: "Intermediate",
+        description: "High-Intensity Interval Training to maximize fat oxidation and boost metabolism.",
+        exercises: [
+            { name: "Jump Squats", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Jump explosively from a squat position.", calories: "15-20" },
+            { name: "Burpees", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Drop to a pushup, jump back up.", calories: "20-25" },
+            { name: "Mountain Climbers", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Drive knees to chest rapidly in plank position.", calories: "15-18" },
+            { name: "High Knees", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Run in place bringing knees up high.", calories: "15-20" },
+            { name: "Plank Jacks", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Jump feet out and in while holding a plank.", calories: "12-15" },
+            { name: "Sprints", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Sprint in place as fast as possible.", calories: "20-25" },
+            { name: "Skater Jumps", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Jump side to side landing on one foot.", calories: "15-18" },
+            { name: "Plank to Push-up", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Start in plank, push up to hands, back down.", calories: "12-15" },
+            { name: "Bicycle Crunches", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Lie on back, alternate elbow to opposite knee.", calories: "10-12" },
+            { name: "Jump Lunges", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Lunge forward, jump and switch legs in air.", calories: "18-22" }
+        ],
+        image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 1 // Basic
+    },
+    {
+        id: 2,
+        title: "Strength Transformation",
+        duration: "75 Mins",
+        calories: "500-650",
+        level: "Beginner",
+        description: "Focus on compound movements to build lean muscle and increase BMR.",
+        exercises: [
+            { name: "Dumbbell Squats", sets: 4, reps: "10-12", rest: "60 secs", instruction: "Hold dumbbells at sides, squat down keeping back straight.", calories: "12-15" },
+            { name: "Push-ups", sets: 4, reps: "10-15", rest: "60 secs", instruction: "Keep body straight, lower chest to floor.", calories: "8-12" },
+            { name: "Dumbbell Rows", sets: 4, reps: "10-12", rest: "60 secs", instruction: "Bent over row, pulling dumbbell to hip.", calories: "10-12" },
+            { name: "Lunges", sets: 3, reps: "12 per leg", rest: "45 secs", instruction: "Step forward into a lunge, alternating legs.", calories: "12-15" },
+            { name: "Shoulder Press", sets: 3, reps: "10-12", rest: "60 secs", instruction: "Press dumbbells overhead from shoulder height.", calories: "8-10" },
+            { name: "Deadlifts", sets: 3, reps: "8-10", rest: "90 secs", instruction: "Lift barbell from ground keeping back straight, extend hips.", calories: "15-20" },
+            { name: "Bench Press", sets: 3, reps: "8-12", rest: "60 secs", instruction: "Press barbell/dumbbells upwards from chest level.", calories: "12-15" },
+            { name: "Pull-ups", sets: 3, reps: "Max", rest: "60 secs", instruction: "Pull body up until chin is over the bar.", calories: "10-15" },
+            { name: "Overhead Tricep Extension", sets: 3, reps: "12-15", rest: "45 secs", instruction: "Extend dumbbell overhead targeting triceps.", calories: "6-8" },
+            { name: "Bicep Curls", sets: 3, reps: "12-15", rest: "45 secs", instruction: "Curl dumbbells upwards focusing on biceps.", calories: "6-8" }
+        ],
+        image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 0 // Free
+    },
+    {
+        id: 3,
+        title: "Yoga for Recovery",
+        duration: "80 Mins",
+        calories: "250-350",
+        level: "All Levels",
+        description: "Active recovery to improve flexibility, reduce stress, and prevent injury.",
+        exercises: [
+            { name: "Downward Dog", sets: 1, reps: "Hold 1 min", rest: "0", instruction: "Form an inverted V shape with body.", calories: "3-5" },
+            { name: "Warrior II", sets: 1, reps: "Hold 30s/side", rest: "0", instruction: "Lunge position with arms outstretched.", calories: "4-6" },
+            { name: "Child's Pose", sets: 1, reps: "Hold 2 min", rest: "0", instruction: "Kneel and sit back on heels, forehead to mat.", calories: "1-2" },
+            { name: "Cobra Stretch", sets: 1, reps: "Hold 30s", rest: "0", instruction: "Lie on stomach, push chest up with arms.", calories: "2-3" },
+            { name: "Tree Pose", sets: 1, reps: "Hold 30s/side", rest: "0", instruction: "Balance on one leg, foot on inner thigh.", calories: "2-4" },
+            { name: "Cat-Cow Stretch", sets: 1, reps: "1 min", rest: "0", instruction: "Flow between arching and rounding the spine.", calories: "2-3" },
+            { name: "Pigeon Pose", sets: 1, reps: "Hold 1 min/side", rest: "0", instruction: "Hip opener with one leg forward, one back.", calories: "3-5" },
+            { name: "Seated Forward Bend", sets: 1, reps: "Hold 1 min", rest: "0", instruction: "Sit with legs extended, reach for toes.", calories: "2-3" },
+            { name: "Bridge Pose", sets: 1, reps: "Hold 45 secs", rest: "15 secs", instruction: "Lie on back, lift hips towards ceiling.", calories: "4-6" },
+            { name: "Corpse Pose (Savasana)", sets: 1, reps: "5 mins", rest: "0", instruction: "Lie flat on back, relax entire body.", calories: "0-1" }
+        ],
+        image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 2 // Pro
+    },
+    {
+        id: 4,
+        title: "Cardio Blast",
+        duration: "60 Mins",
+        calories: "600-750",
+        level: "Beginner",
+        description: "Steady state cardio combined with intervals for endurance.",
+        exercises: [
+            { name: "Jumping Jacks", sets: 3, reps: "1 min", rest: "30 secs", instruction: "Jump feet out and raise arms.", calories: "10-15" },
+            { name: "Running in Place", sets: 3, reps: "3 min", rest: "1 min", instruction: "Keep a steady pace.", calories: "25-30" },
+            { name: "Jump Rope", sets: 3, reps: "2 min", rest: "1 min", instruction: "Basic jump rope movement.", calories: "20-25" },
+            { name: "Box Jumps", sets: 3, reps: "15", rest: "45 secs", instruction: "Jump onto a sturdy box or step.", calories: "15-18" },
+            { name: "High Knees with Twist", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Run in place lifting knees high with a torso twist.", calories: "12-15" },
+            { name: "Butt Kicks", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Jog in place kicking heels up to glutes.", calories: "10-12" },
+            { name: "Tuck Jumps", sets: 3, reps: "15", rest: "30 secs", instruction: "Jump high bringing knees to chest.", calories: "15-20" },
+            { name: "Lateral Shuffles", sets: 3, reps: "45 secs", rest: "15 secs", instruction: "Quick shuffle side to side touching ground.", calories: "12-15" },
+            { name: "Step-ups", sets: 3, reps: "20 per leg", rest: "15 secs", instruction: "Step up onto a box or bench, alternating legs.", calories: "10-12" },
+            { name: "Star Jumps", sets: 3, reps: "15", rest: "30 secs", instruction: "Explosive jump spreading arms and legs in air.", calories: "15-18" }
+        ],
+        image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 0 // Free
+    },
+    {
+        id: 5,
+        title: "Home Hero",
+        duration: "30 Mins",
+        calories: "300-400",
+        level: "Beginner",
+        description: "A full-body workout designed for small spaces with no equipment needed.",
+        exercises: [
+            { name: "Bodyweight Squats", sets: 3, reps: "15", rest: "30 secs", instruction: "Squat down as if sitting in a chair.", calories: "15-20" },
+            { name: "Push-ups (Knees or Toes)", sets: 3, reps: "10-15", rest: "45 secs", instruction: "Keep core tight.", calories: "10-15" },
+            { name: "Lunges", sets: 3, reps: "10 per leg", rest: "30 secs", instruction: "Step forward dropping back knee.", calories: "15-18" },
+            { name: "Plank", sets: 3, reps: "30 secs", rest: "30 secs", instruction: "Hold a straight body line.", calories: "5-10" },
+            { name: "Glute Bridges", sets: 3, reps: "15", rest: "30 secs", instruction: "Lie on back, lift hips.", calories: "10-12" },
+            { name: "Superman Holds", sets: 3, reps: "30 secs", rest: "30 secs", instruction: "Lie on stomach, lift arms and legs off the floor.", calories: "8-12" },
+            { name: "Tricep Dips on Chair", sets: 3, reps: "12-15", rest: "45 secs", instruction: "Use a sturdy chair to perform dips.", calories: "10-15" },
+            { name: "Wall Sit", sets: 3, reps: "45 secs", rest: "30 secs", instruction: "Sit against a wall with legs at 90 degrees.", calories: "10-15" },
+            { name: "Bicycle Crunches", sets: 3, reps: "20 per side", rest: "30 secs", instruction: "Lie on back, alternate elbow to knee.", calories: "12-18" },
+            { name: "High Knees", sets: 3, reps: "45 secs", rest: "30 secs", instruction: "Run in place bringing knees up high.", calories: "15-20" }
+        ],
+        image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 0 // Free
+    },
+    {
+        id: 6,
+        title: "Abs of Steel",
+        duration: "20 Mins",
+        calories: "150-200",
+        level: "Intermediate",
+        description: "Intense core conditioning to sculpt and strengthen your midsection.",
+        exercises: [
+            { name: "Crunches", sets: 4, reps: "20", rest: "30 secs", instruction: "Standard crunch engaging upper abs.", calories: "8-10" },
+            { name: "Leg Raises", sets: 4, reps: "15", rest: "30 secs", instruction: "Lift legs while lying flat for lower abs.", calories: "10-12" },
+            { name: "Russian Twists", sets: 4, reps: "20 per side", rest: "30 secs", instruction: "Twist torso side to side.", calories: "12-15" },
+            { name: "Plank reach", sets: 3, reps: "45 secs", rest: "30 secs", instruction: "Reach arm forward from plank.", calories: "8-12" },
+            { name: "V-Ups", sets: 3, reps: "12", rest: "45 secs", instruction: "Lift legs and torso to meet in middle.", calories: "15-18" },
+            { name: "Flutter Kicks", sets: 4, reps: "30 secs", rest: "30 secs", instruction: "Lie flat horizontally alternating leg kicks.", calories: "10-15" },
+            { name: "Mountain Climbers", sets: 4, reps: "45 secs", rest: "30 secs", instruction: "Drive knees to chest from a plank position.", calories: "15-20" },
+            { name: "Heel Touches", sets: 3, reps: "20 per side", rest: "30 secs", instruction: "Lie on back, reach side to side touching heels.", calories: "8-12" },
+            { name: "Reverse Crunches", sets: 3, reps: "15", rest: "30 secs", instruction: "Bring knees to chest lifting hips slightly off the flor.", calories: "10-12" },
+            { name: "Hollow Body Hold", sets: 3, reps: "30 secs", rest: "30 secs", instruction: "Press lower back into floor and hold arms/legs elevated.", calories: "12-15" }
+        ],
+        image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 1 // Basic
+    },
+    {
+        id: 7,
+        title: "Upper Body Sculpt",
+        duration: "45 Mins",
+        calories: "400-500",
+        level: "Intermediate",
+        description: "Hypertrophy focused workout to build a defined chest, back, and arms.",
+        exercises: [
+            { name: "Incline Push-ups", sets: 4, reps: "12", rest: "60 secs", instruction: "Feet on floor, hands on bench/chair.", calories: "10-12" },
+            { name: "Pull-ups (or Rows)", sets: 4, reps: "8-10", rest: "90 secs", instruction: "Vertical or horizontal pull.", calories: "15-20" },
+            { name: "Pike Push-ups", sets: 3, reps: "10", rest: "60 secs", instruction: "Shoulder focus push-up.", calories: "12-15" },
+            { name: "Dips", sets: 3, reps: "12", rest: "60 secs", instruction: "Triceps dip on chair or bench.", calories: "10-12" },
+            { name: "Diamond Push-ups", sets: 3, reps: "Max", rest: "60 secs", instruction: "Hands close together for triceps.", calories: "12-15" },
+            { name: "Plank Up-Downs", sets: 3, reps: "12", rest: "60 secs", instruction: "Transition from elbow plank to high plank.", calories: "10-15" },
+            { name: "Burpees", sets: 3, reps: "15", rest: "60 secs", instruction: "Drop to a pushup, jump back up.", calories: "15-20" },
+            { name: "Arm Circles", sets: 3, reps: "60 secs", rest: "30 secs", instruction: "Small tight circles forward and backward.", calories: "5-8" },
+            { name: "Reverse Snow Angels", sets: 3, reps: "15", rest: "45 secs", instruction: "Lie face down and sweep arms from hips to above head.", calories: "8-12" },
+            { name: "Walkouts (Inchworms)", sets: 3, reps: "10", rest: "60 secs", instruction: "Walk hands out to plank position and walk back.", calories: "10-15" }
+        ],
+        image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 2 // Pro
+    },
+    {
+        id: 8,
+        title: "Lower Body Power",
+        duration: "50 Mins",
+        calories: "500-600",
+        level: "Intermediate",
+        description: "Build powerful legs and glutes with this strength-focused routine.",
+        exercises: [
+            { name: "Goblet Squats", sets: 5, reps: "10", rest: "90 secs", instruction: "Hold weight at chest, deep squat.", calories: "20-25" },
+            { name: "Romanian Deadlifts", sets: 4, reps: "12", rest: "60 secs", instruction: "Hinge at hips, slight knee bend.", calories: "15-20" },
+            { name: "Bulgarian Split Squats", sets: 3, reps: "10 per leg", rest: "60 secs", instruction: "One foot elevated behind.", calories: "18-22" },
+            { name: "Calf Raises", sets: 4, reps: "20", rest: "30 secs", instruction: "Raise heels off ground.", calories: "5-8" },
+            { name: "Wall Sit", sets: 3, reps: "60 secs", rest: "45 secs", instruction: "Sit against wall, legs at 90 degrees.", calories: "10-12" },
+            { name: "Glute Kickbacks", sets: 3, reps: "15 per leg", rest: "45 secs", instruction: "On all fours, kick one leg back and up.", calories: "10-15" },
+            { name: "Sumo Squats", sets: 3, reps: "15", rest: "60 secs", instruction: "Wide stance squat focusing on inner thighs.", calories: "15-20" },
+            { name: "Lateral Lunges", sets: 3, reps: "10 per leg", rest: "45 secs", instruction: "Step to the side and drop into a lunge.", calories: "12-18" },
+            { name: "Jump Squats", sets: 3, reps: "15", rest: "60 secs", instruction: "Squat down and burst up into a jump.", calories: "20-25" },
+            { name: "Curtsy Lunges", sets: 3, reps: "12 per leg", rest: "45 secs", instruction: "Cross one leg behind the other and lunge.", calories: "15-18" }
+        ],
+        image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 2 // Pro
+    },
+    {
+        id: 9,
+        title: "Athlete Conditioning",
+        duration: "60 Mins",
+        calories: "700+",
+        level: "Advanced",
+        description: "Elite level conditioning to improve speed, agility, and explosive power.",
+        exercises: [
+            { name: "Box Jumps", sets: 5, reps: "10", rest: "60 secs", instruction: "Explosive jump to box.", calories: "20-25" },
+            { name: "Sled Pushes (or Wall Push)", sets: 5, reps: "30 secs", rest: "90 secs", instruction: "Max effort push.", calories: "30-40" },
+            { name: "Battle Ropes", sets: 4, reps: "30 secs", rest: "30 secs", instruction: "Alternating waves.", calories: "15-20" },
+            { name: "Kettlebell Swings", sets: 4, reps: "20", rest: "60 secs", instruction: "Hinge explosive hip snap.", calories: "20-25" },
+            { name: "Sprint Intervals", sets: 6, reps: "20 secs", rest: "40 secs", instruction: "All out sprint.", calories: "25-30" },
+            { name: "Medicine Ball Slams", sets: 4, reps: "15", rest: "45 secs", instruction: "Explosively throw the ball down to the ground.", calories: "15-20" },
+            { name: "Agility Ladder Drills", sets: 5, reps: "45 secs", rest: "30 secs", instruction: "Quick footwork patterns in and out of ladder.", calories: "15-25" },
+            { name: "Broad Jumps", sets: 4, reps: "10", rest: "60 secs", instruction: "Jump forward as far as possible, landing softly.", calories: "15-20" },
+            { name: "Thrusters", sets: 4, reps: "15", rest: "60 secs", instruction: "Front squat directly into an overhead press.", calories: "25-35" },
+            { name: "Tire Flips (or Heavy Deadlift)", sets: 4, reps: "8-10", rest: "90 secs", instruction: "Explosive full body lift and push.", calories: "25-40" }
+        ],
+        image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+        requiredTier: 3 // Elite
+    }
+];

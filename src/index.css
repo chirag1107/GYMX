@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #f0f0f0;
+  --primary-color: #4DD21D;
+  /* Neon Green */
+  --secondary-color: #00ccff;
+  /* Neon Blue */
+  --accent-color: #ff0055;
+  /* Neon Pink/Red for alerts or CTAs */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-heading: 'Teko', sans-serif;
+  /* New Heading Font */
+}
+
+.highlight-text {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  /* Increased size for impact */
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ff4d4d, #ff8c00);
+  /* Fire Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: block;
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 10px rgba(255, 77, 77, 0.3));
+  /* Glow effect */
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px rgba(77, 210, 29, 0.3);
+}
+
+.btn-primary:hover {
+  background: #3EB117;
+  box-shadow: 0 0 25px rgba(77, 210, 29, 0.5);
+  transform: translateY(-2px);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

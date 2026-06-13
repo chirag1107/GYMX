@@ -1,0 +1,253 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stat-icon {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    background: rgba(77, 210, 29, 0.1);
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.stat-card h3 {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value .unit {
+    font-size: 1rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.stat-change {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.stat-change.positive {
+    color: #4DD21D;
+}
+
+.stat-change.negative {
+    color: #ff0055;
+    /* Using accent color for drops (weight loss is good usually, but general coloring logic) */
+}
+
+/* For weight loss, negative is actually good, so let's swap for this specific context or keep standard red=down green=up semantics. 
+   Let's ensure green is 'good' result. */
+.stat-card:first-child .stat-change.negative {
+    color: #4DD21D;
+    /* Weight went down -> Green/Good */
+}
+
+.chart-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+}
+
+.chart-container h2 {
+    margin-bottom: 2rem;
+}
+
+.chart-wrapper {
+    width: 100%;
+    height: 350px;
+}
+
+.recent-activity h2 {
+    margin-bottom: 1.5rem;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.activity-date {
+    color: #888;
+    width: 100px;
+}
+
+.activity-name {
+    font-weight: bold;
+    flex: 1;
+}
+
+.activity-score {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Clickable Cards */
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.click-hint {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.clickable-card:hover .click-hint {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Content Styles */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-table th {
+    color: #888;
+    font-weight: normal;
+}
+
+.days-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.day-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.day-date {
+    font-weight: bold;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+}
+
+.history-item {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.history-title {
+    font-weight: bold;
+    color: #fff;
+}
+
+.history-date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.history-details {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Reset Section */
+.reset-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reset-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 0, 85, 0.1);
+    color: #ff0055;
+    border: 1px solid rgba(255, 0, 85, 0.3);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    background: rgba(255, 0, 85, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.1);
+}
+
+.reset-hint {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.8rem;
+}
