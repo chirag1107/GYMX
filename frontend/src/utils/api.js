@@ -1,7 +1,21 @@
 // Configuration for the backend API URL
 // Can be set via environment variable VITE_API_URL.
-// e.g. VITE_API_URL=https://gymx-backend.onrender.com or http://localhost:5000
-export const API_URL = import.meta.env.VITE_API_URL || '';
+// Defaults to the production URL: https://gymx-backend.onrender.com
+const rawApiUrl = import.meta.env.VITE_API_URL || '';
+
+// Sanitize potential mangled/duplicate URLs (e.g., from Vercel environment variable copy-paste issues)
+function sanitizeApiUrl(url) {
+    if (!url) return '';
+    
+    // Check if the URL is mangled with duplicate gymx-backend.onrender domains
+    if (url.includes('gymx-backend.onrender')) {
+        return 'https://gymx-backend.onrender.com';
+    }
+    
+    return url;
+}
+
+export const API_URL = sanitizeApiUrl(rawApiUrl);
 
 /**
  * Helper to make API requests to the backend.
