@@ -35,9 +35,28 @@ app.use('/api/nutrition', nutritionRoutes);
 // Connect to MongoDB
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-    console.warn('WARNING: MONGODB_URI environment variable is not defined.');
-    console.log('Backend starting in mock/standalone mode. Database connection will not be established.');
+const isValidMongoUri = MONGODB_URI && 
+    MONGODB_URI !== 'undefined' && 
+    MONGODB_URI !== 'null' && 
+    (MONGODB_URI.startsWith('mongodb://') || MONGODB_URI.startsWith('mongodb+srv://'));
+
+const isPlaceholder = MONGODB_URI && (
+    MONGODB_URI.includes('<username>') || 
+    MONGODB_URI.includes('<password>') || 
+    MONGODB_URI.includes('<cluster>')
+);
+
+if (!isValidMongoUri || isPlaceholder) {
+    if (!MONGODB_URI || MONGODB_URI === 'undefined' || MONGODB_URI === 'null') {
+        console.warn('WARNING: MONGODB_URI environment variable is not defined.');
+    } else if (isPlaceholder) {
+        console.warn('WARNING: MONGODB_URI contains placeholder values (<username>, <password>, or <cluster>).');
+        console.warn('Please update the .env file in the backend folder with your actual MongoDB credentials.');
+    } else {
+        console.warn(`WARNING: MONGODB_URI environment variable is invalid (value: "${MONGODB_URI}").`);
+        console.warn('It must start with "mongodb://" or "mongodb+srv://".');
+    }
+    console.log('Backend starting in mock/offline mode. Database connection will not be established.');
     app.listen(PORT, () => {
         console.log(`Server running in mock/offline mode on port ${PORT}`);
     });
